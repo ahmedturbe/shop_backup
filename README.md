@@ -1,6 +1,22 @@
-<<<<<<< HEAD
 # shop_backup
-=======
+
+- cd ../shop_backup
+- php artisan key:generate
+- php artisan migrate
+- php artisan serve --port=8001
+- Get the following repo from this link https://github.com/ahmedturbe/shop and read the readme instructions on setup, then return to this readme and continue with the following points described below
+  
+- terminal manual run:  
+- php artisan backup:process
+
+Run Automatic backup process just for testing:
+1. php artisan schedule:run
+2. php artisan que:work
+
+- Automatically fetches all products from the Shop API (`http://localhost:8000/api/products`) using pagination.
+- Saves them to a local database using transactions.
+- Logs the flow to `storage/logs/laravel.log`.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
